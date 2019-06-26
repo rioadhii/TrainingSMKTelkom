@@ -6,7 +6,6 @@ namespace Quiz
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("Hello World!");
             //printPrima();
             printFibonacci();
 
@@ -37,9 +36,7 @@ namespace Quiz
         
         public static void printFibonacci()
         {
-            Console.Write("Masukan jumlah bilangan fibonacci = ");
-            int jumlah = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i < jumlah; i++)
+            for (int i = 0; i < 20; i++)
             {
                 Console.WriteLine(Fibonacci(i));
             }
