@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz", "ConsoleApps\Quiz\Qu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fundamentals", "ConsoleApps\Fundamentals\Fundamentals.csproj", "{D43094E5-9D66-4A39-97FE-382137BFFC7A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookInventory", "BookInventory\BookInventory.csproj", "{3FA054D0-8875-47F3-AEE5-D1FF81A7BA28}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,18 @@ Global
 		{D43094E5-9D66-4A39-97FE-382137BFFC7A}.Release|x64.Build.0 = Release|Any CPU
 		{D43094E5-9D66-4A39-97FE-382137BFFC7A}.Release|x86.ActiveCfg = Release|Any CPU
 		{D43094E5-9D66-4A39-97FE-382137BFFC7A}.Release|x86.Build.0 = Release|Any CPU
+		{3FA054D0-8875-47F3-AEE5-D1FF81A7BA28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FA054D0-8875-47F3-AEE5-D1FF81A7BA28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FA054D0-8875-47F3-AEE5-D1FF81A7BA28}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3FA054D0-8875-47F3-AEE5-D1FF81A7BA28}.Debug|x64.Build.0 = Debug|Any CPU
+		{3FA054D0-8875-47F3-AEE5-D1FF81A7BA28}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3FA054D0-8875-47F3-AEE5-D1FF81A7BA28}.Debug|x86.Build.0 = Debug|Any CPU
+		{3FA054D0-8875-47F3-AEE5-D1FF81A7BA28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FA054D0-8875-47F3-AEE5-D1FF81A7BA28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FA054D0-8875-47F3-AEE5-D1FF81A7BA28}.Release|x64.ActiveCfg = Release|Any CPU
+		{3FA054D0-8875-47F3-AEE5-D1FF81A7BA28}.Release|x64.Build.0 = Release|Any CPU
+		{3FA054D0-8875-47F3-AEE5-D1FF81A7BA28}.Release|x86.ActiveCfg = Release|Any CPU
+		{3FA054D0-8875-47F3-AEE5-D1FF81A7BA28}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{AEA8D63D-CA2C-4B2A-B5E5-74CAD68A04F1} = {7CF9D6E8-61E8-41AD-9B1E-B36EA8E14C9D}
