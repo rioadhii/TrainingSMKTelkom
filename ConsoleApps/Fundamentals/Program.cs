@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fundamentals.Models;
+using System;
 using System.Collections.Generic;
 
 namespace Fundamentals
@@ -8,6 +9,7 @@ namespace Fundamentals
         static void Main(string[] args)
         {
             #region String Variables
+            Console.WriteLine("=============STRING=============");
             string fullName = "Rio Adhi Pratama";
             DateTime birthDate = new DateTime(1998, 5, 11);
             Console.WriteLine($"Hai, Pak {fullName}");
@@ -27,6 +29,7 @@ namespace Fundamentals
             #endregion
 
             #region Number Variables
+            //Console.WriteLine("=============NUMBER=============");
             int age = DateTime.Now.Year - birthDate.Year;
             Console.WriteLine($"Usia anda {age} tahun");
 
@@ -67,6 +70,7 @@ namespace Fundamentals
             #endregion
 
             #region Conditional Statements / Branches
+            //Console.WriteLine("=============Conditional Statements / Branches=============");
 
             #region IF STATEMENT
             //Console.Write($"Berapa usia anda ? ");
@@ -127,6 +131,8 @@ namespace Fundamentals
             #endregion
 
             #region Collections and Loops
+            //Console.WriteLine("=============Collections and Loops=============");
+
             #region ARRAY OF INTEGER
             //int[] ukuranSepatu = new int[] { 40, 41, 42, 43, 44 };
             #region FOR LOOPS
@@ -160,18 +166,28 @@ namespace Fundamentals
             #endregion
 
             #region LIST using System.Collections.Generic;
-            //Console.WriteLine("Merk notebook : ");
-            //List<string> merkNotebook = new List<string>()
+            //Console.WriteLine("=============Introduction to Classes=============");
+            //List<Person> personList = new List<Person>();
+            //personList.Add(new Person
             //{
-            //     "HP","Lenovo","Apple Macbook",
-            //     "ASUS", "Acer"
-            //};
+            //    FirstName = "Rio",
+            //    MiddleName = "Adhi",
+            //    LastName = "Pratama",
+            //    BirthDate = new DateTime(1998, 5, 11)
+            //});
 
-            //merkNotebook.Sort();
-
-            //foreach (var merk in merkNotebook)
+            //personList.Add(new Person
             //{
-            //    Console.WriteLine(merk);
+            //    FirstName = "Fajar",
+            //    LastName = "Septiawan",
+            //    BirthDate = new DateTime(1997, 9, 27)
+            //});
+
+            //foreach (var person in personList)
+            //{
+            //    Console.WriteLine($"Name : {person.FullName}");
+            //    Console.WriteLine($"Age : {person.Age} years old");
+            //    Console.WriteLine("==========================");
             //}
             #endregion
             #endregion
