@@ -11,7 +11,6 @@ namespace Fundamentals
             #region String Variables
             Console.WriteLine("=============STRING=============");
             string fullName = "Rio Adhi Pratama";
-            DateTime birthDate = new DateTime(1998, 5, 11);
             Console.WriteLine($"Hai, Pak {fullName}");
 
             #region SPLIT STRING
@@ -30,9 +29,6 @@ namespace Fundamentals
 
             #region Number Variables
             //Console.WriteLine("=============NUMBER=============");
-            int age = DateTime.Now.Year - birthDate.Year;
-            Console.WriteLine($"Usia anda {age} tahun");
-
             #region INTEGER
             //int angka1, angka2, hasil;
             //Console.Write("Masukkan angka ke-1 = ");
