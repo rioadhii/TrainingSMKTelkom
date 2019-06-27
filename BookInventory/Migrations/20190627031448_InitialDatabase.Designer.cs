@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
-namespace BookInventory.Models.Migrations
+namespace BookInventory.Migrations
 {
     [DbContext(typeof(BookInventoryDbContext))]
-    [Migration("20190627021157_RequiredNameGenre")]
-    partial class RequiredNameGenre
+    [Migration("20190627031448_InitialDatabase")]
+    partial class InitialDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -35,8 +35,7 @@ namespace BookInventory.Models.Migrations
                         .IsRequired()
                         .HasMaxLength(50);
 
-                    b.Property<string>("PublishYear")
-                        .IsRequired()
+                    b.Property<int>("PublishYear")
                         .HasMaxLength(4);
 
                     b.Property<string>("Title")

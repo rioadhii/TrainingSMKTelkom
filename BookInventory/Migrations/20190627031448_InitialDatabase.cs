@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
-namespace BookInventory.Models.Migrations
+namespace BookInventory.Migrations
 {
     public partial class InitialDatabase : Migration
     {
@@ -13,7 +13,7 @@ namespace BookInventory.Models.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    Name = table.Column<string>(maxLength: 50, nullable: true)
+                    Name = table.Column<string>(maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -29,7 +29,7 @@ namespace BookInventory.Models.Migrations
                     GenreId = table.Column<int>(nullable: false),
                     Title = table.Column<string>(maxLength: 250, nullable: false),
                     Author = table.Column<string>(maxLength: 250, nullable: false),
-                    PublishYear = table.Column<string>(maxLength: 4, nullable: false),
+                    PublishYear = table.Column<int>(maxLength: 4, nullable: false),
                     ISBN = table.Column<string>(maxLength: 50, nullable: false)
                 },
                 constraints: table =>

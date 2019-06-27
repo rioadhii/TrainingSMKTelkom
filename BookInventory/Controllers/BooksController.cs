@@ -47,7 +47,7 @@ namespace BookInventory.Controllers
         // GET: Books/Create
         public IActionResult Create()
         {
-            ViewData["GenreId"] = new SelectList(_context.MsGenres, "Id", "Id");
+            ViewData["GenreId"] = new SelectList(_context.MsGenres, "Id", "Name", null);
             return View();
         }
 
@@ -64,7 +64,7 @@ namespace BookInventory.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["GenreId"] = new SelectList(_context.MsGenres, "Id", "Id", book.GenreId);
+            ViewData["GenreId"] = new SelectList(_context.MsGenres, "Id", "Name", book.GenreId);
             return View(book);
         }
 
@@ -81,7 +81,7 @@ namespace BookInventory.Controllers
             {
                 return NotFound();
             }
-            ViewData["GenreId"] = new SelectList(_context.MsGenres, "Id", "Id", book.GenreId);
+            ViewData["GenreId"] = new SelectList(_context.MsGenres, "Id", "Name", book.GenreId);
             return View(book);
         }
 
@@ -118,7 +118,7 @@ namespace BookInventory.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-            ViewData["GenreId"] = new SelectList(_context.MsGenres, "Id", "Id", book.GenreId);
+            ViewData["GenreId"] = new SelectList(_context.MsGenres, "Id", "Name", book.GenreId);
             return View(book);
         }
 

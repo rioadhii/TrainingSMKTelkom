@@ -4,56 +4,74 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<div class="container">
+    <h3 class="bd-title" id="content">List of Book</h3>
+    <p>
+        <a class="btn btn-sm btn-primary" asp-action="Create">Create New</a>
+    </p>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>No.</th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Title)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Author)
+                        </th>
+                        <th>
+                            @Html.DisplayName("Year")
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ISBN)
+                        </th>
+                        <th>
+                            @Html.DisplayName("Genre")
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{ int rowNo = 1;}
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td>@rowNo</td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Author)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PublishYear)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ISBN)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.MsGenre.Name)
+                        </td>
+                        <td>
+                            <div class="dropdown">
+                                <a class="btn btn-sm btn-warning dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                                    Actions
+                                </a>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Author)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PublishYear)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ISBN)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MsGenre)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Author)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PublishYear)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ISBN)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MsGenre.Id)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                    <a class="dropdown-item" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                                    <a class="dropdown-item" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                        rowNo++;
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

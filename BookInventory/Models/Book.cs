@@ -19,9 +19,8 @@ namespace BookInventory.Models
         [Required]
         public string Author { get; set; }
 
-        [MaxLength(4)]
-        [Required]
-        public string PublishYear { get; set; }
+        [Range(1900, 2019, ErrorMessage = "Year must between 1900-2019")]
+        public int PublishYear { get; set; }
 
         [MaxLength(50)]
         [Required]
