@@ -1,0 +1,53 @@
+﻿@model IEnumerable<BookInventory.Models.MsGenre>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    <h3 class="bd-title" id="content">List of Genre</h3>
+    <p>
+        <a class="btn btn-sm btn-primary" asp-action="Create">Create New</a>
+    </p>
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table table-sm table-bordered table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>No.</th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Name)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{ int rowNo = 1;}
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@rowNo</td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                <div class="dropdown">
+                                    <a class="btn btn-sm btn-warning dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                                        Actions
+                                    </a>
+
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <a class="dropdown-item" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                        <a class="dropdown-item" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                                        <a class="dropdown-item" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        rowNo++;
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

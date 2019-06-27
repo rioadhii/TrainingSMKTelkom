@@ -2,15 +2,17 @@
 using BookInventory.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace BookInventory.Models.Migrations
 {
     [DbContext(typeof(BookInventoryDbContext))]
-    partial class BookInventoryDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190626103841_ChangeAutoIncrementKey")]
+    partial class ChangeAutoIncrementKey
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -54,7 +56,6 @@ namespace BookInventory.Models.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasMaxLength(50);
 
                     b.HasKey("Id");
